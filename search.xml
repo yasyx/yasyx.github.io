@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Java为什么不支持多继承？</title>
+      <link href="/2023/11/16/java-basic-knowledge-003/"/>
+      <url>/2023/11/16/java-basic-knowledge-003/</url>
+      
+        <content type="html"><![CDATA[<h3 id="C-中的多继承">C++中的多继承</h3><ul><li>C++支持多继承，但是由于C++支持多继承出现了<code>菱形继承</code>的问题，为了解决菱形继承C++又引入了<code>虚继承</code>。而在实际情况中需要用到多继承的情况并不多。但是因此引发的问题解决起来却很复杂。</li></ul><h3 id="菱形继承问题">菱形继承问题</h3><p><img src="/img/img-lxjc.png" alt="菱形继承"></p><ul><li>如图所示，D继承了B,C，同时B,C继承了A。这种情况就叫做菱形继承。这种情况下D中会有两份A中的方法，因此在调用时会有歧义，是调用B继承的A的方法，还是C继承的A的方法。因此C++又引入了虚继承。</li></ul><h3 id="Java中的多继承">Java中的多继承</h3><ul><li>Java不允许多继承，在Java设计之初，Java作者吸取了C++因为引入多继承而产生的一系列的问题，从而决定在Java中不允许多继承。</li><li>从另一个角度看，Java虽然不允许多继承，但是它允许实现多个接口。在Java8之前因为接口中方法不允许有方法体，因此，虽然不同的接口中可能有相同的方法，但是因为实现都是子类来实现。所以也不会产生歧义。<br>但是Java8以后接口中允许有方法体的方法，如果子类实现的接口中有相同的方法，这时Java会强制要求子类重写此方法，从而避免歧义。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java中的多态</title>
+      <link href="/2023/11/16/java-basic-knowledge-004/"/>
+      <url>/2023/11/16/java-basic-knowledge-004/</url>
+      
+        <content type="html"><![CDATA[<h3 id="概念">概念</h3><ul><li>同一操作作用于不同的对象，可以有不同的解释，产生不同的操作结果。</li><li>多态是一种运行期的状态，即动态绑定（在程序运行期间根据引用所指向的实际类型调佣其方法）。</li></ul><h3 id="多态条件">多态条件</h3><ul><li>继承类或者实现接口</li><li>子类要重写父类的方法</li><li>父类的引用要指向子类的实例</li></ul><h3 id="重载与重写">重载与重写</h3><ul><li>重载是一个编译期概念，遵循"静态绑定"，在编译期根据方法的名称，参数列表确定调用哪个方法。</li><li>重写是一个运行期概念，遵循"动态绑定"，即在运行期根据引用所指向的实际类型决定调用哪个方法。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>啥是面向对象?</title>
+      <link href="/2023/11/16/java-basic-knowledge-002/"/>
+      <url>/2023/11/16/java-basic-knowledge-002/</url>
+      
+        <content type="html"><![CDATA[<h3 id="概念">概念</h3><ul><li>把解决问题的过程拆分成一个个的对象，例如一个支付的过程可能会涉及到<code>支付渠道对象</code>、<code>库存对象</code>、<code>物流对象</code>等等。每个对象处理自己对象内的职责。</li></ul><h3 id="Java中的面向对象">Java中的面向对象</h3><h5 id="三个基本特征">三个基本特征</h5><ul><li>继承<ul><li>继承父类或者父类的属性和方法</li></ul></li><li>封装<ul><li>把现实中的事物抽象成一个Java类</li></ul></li><li>多态<ul><li>继承父类后可以重写父类的属性和方法，使得父类和其子类的属性和方法都有不同的实现，从而实现不同的行为。</li></ul></li></ul><h5 id="五大基本原则">五大基本原则</h5><ul><li>单一职责原则<ul><li>每个类只做好一件事</li></ul></li><li>开放封闭原则<ul><li>对修改封闭，对扩展开放。</li></ul></li><li>里氏替换原则<ul><li>子类必须可以完全替代父类</li></ul></li><li>依赖倒置原则<ul><li>程序要依赖其抽象接口，而不是具体的实现</li></ul></li><li>接口隔离原则<ul><li>指的是每个接口的职能要单一，避免一个接口大而全</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java语音和C++的区别</title>
+      <link href="/2023/11/16/java-basic-knowledge-001/"/>
+      <url>/2023/11/16/java-basic-knowledge-001/</url>
+      
+        <content type="html"><![CDATA[<p>Java和C++ 是两种不同的高级编程语言，他们都有各自己的优缺点。</p><h3 id="性能方面">性能方面</h3><ul><li>Java为解释型语言（由于JIT<code>Just in time</code>的存在，即在运行期根据代码段调用次数的累积，JIT会将常用的代码编译为机器码缓存起来。所以也有一说Java为半解释，半编译型语言），由于Java存在解释执行的过程， 因此Java相对C++在性能上会偏弱。</li><li>C++为编译型语言，即源代码要经过编译器编译成机器码才能被操作系统执行。因为在执行的过程中没有解释的过程。因此C++的执行性能会优于Java。</li></ul><h3 id="资源占用方面">资源占用方面</h3><ul><li>Java由于有JVM的存在，由Java编写的应用程序普遍需要占用较多的内存空间。</li><li>同等规模的应用程序，如果由C++编写，内存占用方面应该会优于Java。</li></ul><h3 id="跨平台性">跨平台性</h3><ul><li>Java是一种跨平台的语言。跨平台的实现原理为，将Java源代码编译为字节码（class文件）交由JVM执行。我们可以这么认为，Java是一种平台无关性语言，但是JVM是平台相关性语言。</li><li>C++是一种平台相关性语言，在对应平台上运行时，需要现将源代码编译为平台认识二进制可执行文件，才能执行。</li></ul><h3 id="内存管理">内存管理</h3><ul><li>Java语言的内存管理是交由JVM去完成的，也就是说开发人员不用过多的考虑程序的内存管理问题。JVM会统一的进行管理(GC机制，垃圾收集器)</li><li>C++开发人员需要自行管理程序的内存.(析构函数)</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java程序开发过程中总结的一些小问题</title>
+      <link href="/2023/10/11/java-knowledge-001/"/>
+      <url>/2023/10/11/java-knowledge-001/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Lombok注解使用注意事项">Lombok注解使用注意事项</h2><ul><li>使用@Builder 注解修饰的实体存在默认值时，使用Builder方式构建的实体对象不会将默认值带入。例如  <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Data</span><span class="token annotation punctuation">@Builder</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>  <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>  <span class="token keyword">private</span> <span class="token class-name">Integer</span> age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token class-name">User</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">userName</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这时user对象中的age属性为null;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><p><span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java Lombok </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>K8S学习</title>
+      <link href="/2023/10/11/learning-k8s-001/"/>
+      <url>/2023/10/11/learning-k8s-001/</url>
+      
+        <content type="html"><![CDATA[<h2 id="K8S的架构">K8S的架构</h2><ul><li>Api Server</li><li>Schedule</li><li>Controller</li><li>ETCD</li></ul><h2 id="K8S中的基本概念">K8S中的基本概念</h2><ul><li>Pod</li><li>Service</li><li>Deployment</li><li>Replica Set</li></ul><h2 id="访问K8S集群">访问K8S集群</h2><ul><li>Ingress</li><li>Istio</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> K8S </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> K8S </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RocketMQ</title>
+      <link href="/2023/10/11/rocket-mq/"/>
+      <url>/2023/10/11/rocket-mq/</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景">背景</h3><p>RocketMQ是阿里在2012年开源的中间件，参考Kafka实现。后面捐献给了apache，现在为apache顶级项目</p><h3 id="领域模型">领域模型</h3><ul><li>消息生产者</li><li>消息存储</li><li>消息消费</li></ul><h3 id="部署架构">部署架构</h3><p>分为namesrv和broker，5.0中多出来了proxy （暂不知道proxy有什么用）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Message Queue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Message Queue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
